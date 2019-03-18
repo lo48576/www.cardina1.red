@@ -1,0 +1,127 @@
+---
+title: だれ
+created_at: 2019-03-19T02:11:21+09:00
+published_at: 2019-03-19T02:11:21+09:00
+format: docbook
+title: "だれ"
+kind: article
+
+excerpt: "だれ"
+---
+<?xml version="1.0"?>
+<article
+	xmlns="http://docbook.org/ns/docbook"
+	xmlns:xl="http://www.w3.org/1999/xlink"
+	xml:id="about-me"
+	xml:lang="ja"
+	version="5.1"
+>
+<title>だれ</title>
+
+<simpara>
+	情報工学系の大学院生。
+</simpara>
+
+<section>
+	<title>Identities</title>
+
+	<section>
+		<title>SNS、コンテンツ共有サイト</title>
+
+		<section>
+			<title>私生活</title>
+
+			<itemizedlist>
+				<listitem>
+					Mastodon: <link xl:href="https://mastodon.cardina1.red/@lo48576">@lo48576@mastodon.cardina1.red</link>
+					<itemizedlist>
+						<listitem>
+							完全にプライベート用なので社会性を一切期待してはいけない
+						</listitem>
+					</itemizedlist>
+				</listitem>
+			</itemizedlist>
+		</section>
+
+		<section>
+			<title>進捗</title>
+
+			<itemizedlist>
+				<listitem>
+					Mastodon: <link xl:href="https://mastodon.cardina1.red/@loliconductor">@loliconductor@mastodon.cardina1.red</link>
+					<itemizedlist>
+						<listitem>
+							進捗用。
+							主に進捗のことや技術的な話題を一方的に投げるだけのアカウント。
+							人に見せるならこちら。
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					Twitter: <link xl:href="https://twitter.com/loliconductor">@loliconductor</link>
+					<itemizedlist>
+						<listitem>
+							Twitter へのミラー用。
+							Mastodon とだいたい同じことを呟くが、 Twitter アカウントはメインではない。
+							一応リプライなどはときどき確認するつもり。
+						</listitem>
+					</itemizedlist>
+				</listitem>
+			</itemizedlist>
+		</section>
+
+		<section>
+			<title>技術情報・成果物公開</title>
+
+			<itemizedlist>
+				<listitem>
+					GitHub: <link xl:href="https://github.com/lo48576">@lo48576</link>
+					<itemizedlist>
+						<listitem>
+							公開可能な最近のものはだいたいここに置いてある。
+							git を使っていなかった時代のものは残念ながらアーカイブの奥深くに眠っており、公開していない。
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					ブログ: <link xl:href="https://blog.cardina1.red/">何とは言わない天然水飲みたさ (blog.cardina1.red)</link>
+					<itemizedlist>
+						<listitem>
+							冗談や私生活から真面目な技術記事まで、体力のあるときに書いた記事はだいたいすべてここに投げている。
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					Qiita: <link xl:href="https://qiita.com/lo48576">@lo48576</link>
+					<itemizedlist>
+						<listitem>
+							基本的に何か書くときはブログなので、あまり Qiita は使っていない。
+							継続的に (あるいは定期的に) 更新する可能性のある記事を、気紛れで Qiita に置いたりしている。
+						</listitem>
+					</itemizedlist>
+				</listitem>
+			</itemizedlist>
+		</section>
+	</section>
+
+	<section>
+		<title>PGP</title>
+
+		<itemizedlist>
+			<listitem>
+				short: 0x492C9A5F
+			</listitem>
+			<listitem>
+				long: 0x3263C611492C9A5F
+			</listitem>
+			<listitem>
+				full: 4CC5 A8F9 C465 41E2 F1AA  41BE 3263 C611 492C 9A5F
+			</listitem>
+			<listitem>
+				<link xl:href="/assets/misc/lo48576-hard-wi-red.asc">Link to exported public key</link>
+			</listitem>
+		</itemizedlist>
+	</section>
+</section>
+
+</article>

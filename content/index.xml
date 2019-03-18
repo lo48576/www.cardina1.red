@@ -15,4 +15,10 @@ kind: page
 >
 <title>人工天然水</title>
 
+<itemizedlist>
+	<listitem>
+		<link xl:href="/about">だれ</link>
+	</listitem>
+</itemizedlist>
+
 </section>
