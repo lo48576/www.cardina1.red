@@ -1,0 +1,9 @@
+<%- render '/page-base.*' do -%>
+<aside class="article-info">
+	<%= render '/part/article-dates.*' -%>
+	<%= render '/part/tags.*' -%>
+</aside>
+<hr />
+<%= yield -%>
+<%- end -%>
+<%-# vim: set ft=eruby : -%>

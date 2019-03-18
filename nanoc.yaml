@@ -1,0 +1,30 @@
+# A list of file extensions that Nanoc will consider to be textual rather than
+# binary. If an item with an extension not in this list is found,  the file
+# will be considered as binary.
+text_extensions: [ 'adoc', 'asciidoc', 'atom', 'coffee', 'css', 'erb', 'haml', 'handlebars', 'hb', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'ms', 'mustache', 'php', 'rb', 'rdoc', 'sass', 'scss', 'slim', 'tex', 'txt', 'xhtml', 'xml', 'json', 'xsl' ]
+
+# A list of index filenames, i.e. names of files that will be served by a web
+# server when a directory is requested. Usually, index files are named
+# “index.html”, but depending on the web server, this may be something else,
+# such as “default.htm”. This list is used by Nanoc to generate pretty URLs.
+index_filenames: [ 'index.xhtml', 'index.html' ]
+
+prune:
+  auto_prune: true
+
+data_sources:
+  - type: filesystem
+    encoding: utf-8
+
+# for atom_feed (Nanoc::Blogging)
+base_url: 'https://www.cardina1.red'
+
+# For my code.
+site_title: '人工天然水'
+
+# Deploy
+deploy:
+  default:
+    kind: rsync
+    dst: "www@www.cardina1.red:"
+    options: [ "-av", "--checksum", "--delete-after", "-e", "ssh" ]

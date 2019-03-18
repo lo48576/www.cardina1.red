@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="utf-8" />
+	<title><%= @item[:title] %> - <%= h @config[:site_title] %></title>
+	<!-- sanitize.css -->
+	<link rel="stylesheet" href="/assets/css/sanitize.css" />
+	<!-- pygments -->
+	<link rel="stylesheet" href="/assets/css/pygments/colorful.css" />
+	<!--<link rel="stylesheet" href="/assets/css/pygments/monokai.css" />-->
+	<!-- original css -->
+	<link rel="stylesheet" href="/assets/css/site.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<link rel="canonical" href="<%= @config[:base_url] + @item.path %>" />
+	<%- if excerpt = @item[:excerpt] %><meta name="description" content="<%= excerpt %>" /><% end -%>
+	<%= render '/part/metadata-for-sns.*' -%>
+	<meta name="generator" content="Nanoc <%= Nanoc::VERSION %>" />
+</head>
+<body>
+	<header>
+		<div class="size-container">
+			<span class="site-title"><a href="/"><%= h @config[:site_title] %></a></span>
+		</div>
+	</header>
+	<main>
+		<div class="size-container">
+			<%= yield -%>
+		</div>
+	</main>
+	<footer>
+		<div class="size-container">
+		</div>
+	</footer>
+</body>
+</html>
+<%-# vim: set ft=eruby : -%>

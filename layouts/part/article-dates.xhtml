@@ -1,0 +1,18 @@
+<%- target = @target || @item -%>
+<div class="article-dates">
+	<%- if published_at = target[:published_at] || target[:created_at] -%>
+		<p>
+			published:
+			<time datetime="<%= published_at.strftime('%FT%T%:z') %>">
+				<%= published_at.strftime('%Y/%m/%d (%a) %H:%M %Z') %>
+			</time>
+		</p>
+	<%- end -%>
+	<%- if updated_at = target[:updated_at] -%>
+		<p>
+			updated:
+			<time datetime="<%= updated_at.strftime('%FT%T%:z') %>"><%= updated_at.strftime('%Y/%m/%d (%a) %H:%M %Z') %></time>
+		</p>
+	<%- end -%>
+</div>
+<%-# vim: set ft=eruby : -%>

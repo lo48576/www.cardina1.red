@@ -1,0 +1,59 @@
+%docbook-preserve-spaces {
+	white-space: pre;
+}
+
+%docbook-terminal {
+	background: black;
+	font-family: $font-family-terminal;
+	color: #ccc;
+
+	code, kbd, samp {
+		// Ignore font settings by sanitize.css.
+		font-family: inherit;
+		font-size: inherit;
+	}
+}
+
+%docbook-terminal-userinput {
+	color: #f84;
+	font-weight: bolder;
+}
+
+pre {
+	&.#{$docbook-class-prefix}programlisting {
+		white-space: normal;
+
+		>code {
+			@extend %docbook-preserve-spaces;
+		}
+	}
+
+	&.#{$docbook-class-prefix}screen {
+		white-space: normal;
+
+		>samp {
+			@extend %docbook-preserve-spaces;
+		}
+	}
+
+	&.#{$docbook-class-prefix}literallayout {
+		@extend %docbook-preserve-spaces;
+
+		&[data-docbook-literallayout-class="normal"] {
+			font-family: inherit;
+		}
+		&[data-docbook-literallayout-class="monospaced"] {
+			font-family: $font-family-monospace;
+		}
+	}
+}
+
+.#{$docbook-class-prefix}screen {
+	&[data-docbook-role~="terminal"] {
+		@extend %docbook-terminal;
+
+		.#{$docbook-class-prefix}userinput {
+			@extend %docbook-terminal-userinput;
+		}
+	}
+}
