@@ -19,6 +19,9 @@ kind: page
 	<listitem>
 		<link xl:href="/about">だれ</link>
 	</listitem>
+	<listitem>
+		<link xl:href="/works">works</link>
+	</listitem>
 </itemizedlist>
 
 </section>
