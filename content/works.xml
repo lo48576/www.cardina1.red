@@ -175,6 +175,10 @@ excerpt: "つくったものなど"
 				そのため、ライブラリとしての利用も可能である。
 				また、糖衣構文の追加も容易である。
 			</simpara>
+
+			<simpara>
+				see also: <link linkend="documents--casual-presentation--xslt10-lambda-calculus">発表資料</link>
+			</simpara>
 		</section>
 	</section>
 
@@ -195,6 +199,50 @@ excerpt: "つくったものなど"
 			</simpara>
 			<simpara>
 				DocBook 5 のうちでも、ブログや自分のサイトで使う要素のみ優先的に対応している。
+			</simpara>
+		</section>
+	</section>
+</section>
+
+<section xml:id="documents">
+	<title>ドキュメント、文書、記事など</title>
+
+	<section xml:id="documents--casual-presentation">
+		<title>カジュアル発表資料</title>
+
+		<section xml:id="documents--casual-presentation--xslt10-lambda-calculus">
+			<title>XML 変換言語はチューリングおじさんの夢を見ない</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://speakerdeck.com/lo48576/lambda-calculus-implementation-by-xslt-1-dot-0">XML 変換言語はチューリングおじさんの夢を見ない / Lambda calculus implementation by XSLT 1.0 - Speaker Deck</link>
+				</listitem>
+				<listitem>
+					<link xl:href="https://nextcloud.cardina1.red/s/Aae8AqRHnBs5RLn?path=%2Fpresentations">Nextcloud (PDF 置き場)</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				<link linkend="dev--xslt10-lambda-calculus">xslt10-lambda-calculus</link> についてサークルで発表したときの資料。
+			</simpara>
+		</section>
+	</section>
+
+	<section xml:id="documents--articles">
+		<title>記事</title>
+
+		<section xml:id="documents--articles--dist-sns">
+			<title>分散 SNS</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://blog.cardina1.red/2017/04/13/federated-social-web/">gnusocial や mastodon の哲学 - 何とは言わない天然水飲みたさ</link>
+				</listitem>
+				<listitem>
+					<link xl:href="https://blog.cardina1.red/2017/12/15/comparison-of-mastodon-and-gnusocial/">Mastodon が普及しつつあるけど、元 GNU Social 勢として思うこともありまして - 何とは言わない天然水飲みたさ</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				分散 SNS についての思想的な話を少々。
 			</simpara>
 		</section>
 	</section>
