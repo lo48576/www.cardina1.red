@@ -125,6 +125,14 @@ excerpt: "だれ"
 	</section>
 </section>
 
+<section xml:id="works">
+	<title>works</title>
+
+	<simpara>
+		<link xl:href="/works">別ページ</link>参照。
+	</simpara>
+</section>
+
 <section xml:id="environment-and-tools">
 	<title>env</title>
 
