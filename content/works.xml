@@ -18,16 +18,16 @@ excerpt: "つくったものなど"
 >
 <title>works</title>
 
-<section>
+<section xml:id="development">
 	<title>開発</title>
 
 	<simpara>
 		趣味ﾎﾟﾖｸﾞﾔﾐﾝ。
 	</simpara>
-	<section>
+	<section xml:id="dev--libraries">
 		<title>ライブラリ</title>
 
-		<section>
+		<section xml:id="dev--fbxcel">
 			<title>fbxcel [actively maintained]</title>
 
 			<itemizedlist>
@@ -44,7 +44,7 @@ excerpt: "つくったものなど"
 			</simpara>
 		</section>
 
-		<section>
+		<section xml:id="dev--opaque_typedef">
 			<title>opaque_typedef [experimental]</title>
 
 			<itemizedlist>
@@ -60,7 +60,7 @@ excerpt: "つくったものなど"
 			</simpara>
 		</section>
 
-		<section>
+		<section xml:id="dev--sgr_macro">
 			<title>sgr_macro [passively maintained]</title>
 
 			<itemizedlist>
@@ -89,10 +89,10 @@ excerpt: "つくったものなど"
 		</section>
 	</section>
 
-	<section>
+	<section xml:id="dev--applications">
 		<title>アプリケーション</title>
 
-		<section>
+		<section xml:id="dev--fbx-tree-view">
 			<title>fbx-tree-view [passively maintained]</title>
 
 			<itemizedlist>
@@ -123,7 +123,7 @@ excerpt: "つくったものなど"
 			</informalfigure>
 		</section>
 
-		<section>
+		<section xml:id="dev--fbx_object_depviz">
 			<title>fbx_object_depviz [passively maintained]</title>
 
 			<itemizedlist>
@@ -155,7 +155,7 @@ excerpt: "つくったものなど"
 			</informalfigure>
 		</section>
 
-		<section>
+		<section xml:id="dev--xslt10-lambda-calculus">
 			<title>xslt10-lambda-calculus [passively maintained]</title>
 
 			<itemizedlist>
@@ -178,10 +178,10 @@ excerpt: "つくったものなど"
 		</section>
 	</section>
 
-	<section>
+	<section xml:id="dev--data-and-stylesheets">
 		<title>データ、スタイルシート</title>
 
-		<section>
+		<section xml:id="dev--docbook-xhtml5">
 			<title>docbook-xhtml5 [actively maintained]</title>
 
 			<itemizedlist>
@@ -200,10 +200,10 @@ excerpt: "つくったものなど"
 	</section>
 </section>
 
-<section>
+<section xml:id="creative-works">
 	<title>創作</title>
 
-	<section>
+	<section xml:id="creative-works--novels">
 		<title>小説</title>
 
 		<simpara>

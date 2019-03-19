@@ -23,7 +23,7 @@ excerpt: "だれ"
 	情報工学系の大学院生。
 </simpara>
 
-<section>
+<section xml:id="identity">
 	<title>Identities</title>
 
 	<section>
@@ -125,7 +125,7 @@ excerpt: "だれ"
 	</section>
 </section>
 
-<section>
+<section xml:id="environment-and-tools">
 	<title>env</title>
 
 	<simpara>
