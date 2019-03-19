@@ -1,0 +1,313 @@
+---
+title: works
+created_at: 2019-03-19T03:16:18+09:00
+published_at: 2019-03-19T03:16:18+09:00
+format: docbook
+title: "works"
+kind: article
+
+excerpt: "つくったものなど"
+---
+<?xml version="1.0"?>
+<article
+	xmlns="http://docbook.org/ns/docbook"
+	xmlns:xl="http://www.w3.org/1999/xlink"
+	xml:id="works"
+	xml:lang="ja"
+	version="5.1"
+>
+<title>works</title>
+
+<section xml:id="development">
+	<title>開発</title>
+
+	<simpara>
+		趣味ﾎﾟﾖｸﾞﾔﾐﾝ。
+	</simpara>
+	<section xml:id="dev--libraries">
+		<title>ライブラリ</title>
+
+		<section xml:id="dev--fbxcel">
+			<title>fbxcel [actively maintained]</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://github.com/lo48576/fbxcel">fbxcel</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				Rust 用の FBX ライブラリ。
+				ゲームで使いたくて作った。
+			</simpara>
+			<simpara>
+				<le:time datetime="2019-03-19T15:40:11+09:00">2019年3月</le:time>現在、 FBX 7 のバイナリパーサと極めて簡素な DOM 対応が実装されている。
+			</simpara>
+		</section>
+
+		<section xml:id="dev--opaque_typedef">
+			<title>opaque_typedef [experimental]</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://github.com/lo48576/opaque_typedef">opaque_typedef</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				opaque typedef パターンの適用を自動化する (<code>derive で可能にする</code>) ための Rust 用の proc macro ライブラリ。
+			</simpara>
+			<simpara>
+				インターフェースのデザインも内部設計もうまい方法が思い付かず、 experimental のままになっている。
+			</simpara>
+		</section>
+
+		<section xml:id="dev--sgr_macro">
+			<title>sgr_macro [passively maintained]</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://github.com/lo48576/sgr_macro">sgr_macro</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				ANSI color sequence をお手軽に使うための C / C++ 用の header-only ライブラリ。
+			</simpara>
+			<simpara>
+				任意長引数のマクロやマクロ内ループ処理と向き合う練習のついでとして実装したものなので、黒魔術が利用されている。
+				マクロ定数を定義するだけで非侵襲的な拡張が容易に行える設計になっている。
+			</simpara>
+			<informalfigure>
+				<programlisting language="c"><![CDATA[printf(
+    "red char->" SGR(FG_RED)
+    "underline and bold->" SGR(UNDERLINE, BOLD)
+    "background green->" SGR(BG_GREEN)
+    "reset->" SGR(RESET) "sample end\n"
+);]]></programlisting>
+				<caption>
+					<phrase>利用例 (<link xl:href="https://github.com/lo48576/sgr_macro/blob/master/examples/sample.c"><filename>examples/sample.c</filename></link> より)</phrase>
+				</caption>
+			</informalfigure>
+		</section>
+	</section>
+
+	<section xml:id="dev--applications">
+		<title>アプリケーション</title>
+
+		<section xml:id="dev--fbx-tree-view">
+			<title>fbx-tree-view [passively maintained]</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://github.com/lo48576/fbx-tree-view">fbx-tree-view</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				FBX ファイルの木構造データを閲覧するための GUI アプリケーション。
+				FBX ライブラリ実装にあたって、 FBX データの内部をバイナリエディタで覗き見るのがつらかったため実装した。
+			</simpara>
+			<informalfigure>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="/about/fbx-tree-view-screenshot.png" />
+					</imageobject>
+					<alt>
+						<phrase>
+							fbx-tree-view によって、 FBX の木構造、ノード属性、警告やエラーなどを閲覧できる。
+						</phrase>
+					</alt>
+				</mediaobject>
+				<caption>
+					<phrase>
+						fbx-tree-view によって、 FBX の木構造、ノード属性、警告やエラーなどを閲覧している例
+					</phrase>
+				</caption>
+			</informalfigure>
+		</section>
+
+		<section xml:id="dev--fbx_object_depviz">
+			<title>fbx_object_depviz [passively maintained]</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://github.com/lo48576/fbx_object_depviz">fbx_object_depviz</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				FBX のオブジェクトノード同士の関係を graphviz 形式でエクスポートする CLI アプリケーション。
+				FBX ライブラリ実装にあたって、 FBX データの構造を理解する必要があったため実装した。
+			</simpara>
+			<simpara>
+				json でクエリを指定することで、特定のノードを抽出して描画したり色を付けたりなどできる。
+			</simpara>
+			<informalfigure>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="/about/fbx_object_depviz-output-example.svg" />
+					</imageobject>
+					<alt>
+						<phrase>
+							fbx_object_depviz で、たとえば静的なメッシュ表示に必要そうなノードを抽出して関係を表示できる。
+						</phrase>
+					</alt>
+				</mediaobject>
+				<caption>
+					<phrase>fbx_object_depviz で、静的なメッシュ表示に必要そうなノードを抽出して関係を表示してみた例</phrase>
+				</caption>
+			</informalfigure>
+		</section>
+
+		<section xml:id="dev--xslt10-lambda-calculus">
+			<title>xslt10-lambda-calculus [passively maintained]</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://github.com/lo48576/xslt10-lambda-calculus">xslt10-lambda-calculus</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				XSLT 1.0 (と exslt の <code>node-set()</code>) によってλ計算の処理系を実装した。
+			</simpara>
+			<simpara>
+				巷にある XSLT の計算完備性のデモはチューリングマシンのエミュレーションをしていたり、λ計算の処理系であってもロジックの大部分が文字列処理だったりする。
+				しかし xslt10-lambda-calculus はλ式を XML にエンコードし、その抽象構文木を XSLT により処理して同じ形式の XML データを出力することで簡約を進行させるため、真に関数型言語的な (?) 処理系である。
+			</simpara>
+			<simpara>
+				de Bruijn indexing やη簡約、簡約基の発見、ワンステップ簡約、 pretty print、脱糖など様々なコンポーネントが単体で利用可能なようにモジュール化されている。
+				そのため、ライブラリとしての利用も可能である。
+				また、糖衣構文の追加も容易である。
+			</simpara>
+
+			<simpara>
+				see also: <link linkend="documents--casual-presentation--xslt10-lambda-calculus">発表資料</link>
+			</simpara>
+		</section>
+	</section>
+
+	<section xml:id="dev--data-and-stylesheets">
+		<title>データ、スタイルシート</title>
+
+		<section xml:id="dev--docbook-xhtml5">
+			<title>docbook-xhtml5 [actively maintained]</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://github.com/lo48576/docbook-xhtml5">docbook-xhtml5</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				DocBook 5 から XHTML 5 への変換のための XSLT スタイルシート。
+				この web サイトも、 DocBook で書かれた記事をこのスタイルシートで変換することで生成している。
+			</simpara>
+			<simpara>
+				DocBook 5 のうちでも、ブログや自分のサイトで使う要素のみ優先的に対応している。
+			</simpara>
+		</section>
+	</section>
+</section>
+
+<section xml:id="documents">
+	<title>ドキュメント、文書、記事など</title>
+
+	<section xml:id="documents--casual-presentation">
+		<title>カジュアル発表資料</title>
+
+		<section xml:id="documents--casual-presentation--xslt10-lambda-calculus">
+			<title>XML 変換言語はチューリングおじさんの夢を見ない</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://speakerdeck.com/lo48576/lambda-calculus-implementation-by-xslt-1-dot-0">XML 変換言語はチューリングおじさんの夢を見ない / Lambda calculus implementation by XSLT 1.0 - Speaker Deck</link>
+				</listitem>
+				<listitem>
+					<link xl:href="https://nextcloud.cardina1.red/s/Aae8AqRHnBs5RLn?path=%2Fpresentations">Nextcloud (PDF 置き場)</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				<link linkend="dev--xslt10-lambda-calculus">xslt10-lambda-calculus</link> についてサークルで発表したときの資料。
+			</simpara>
+		</section>
+	</section>
+
+	<section xml:id="documents--articles">
+		<title>記事</title>
+
+		<section xml:id="documents--articles--dist-sns">
+			<title>分散 SNS</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://blog.cardina1.red/2017/04/13/federated-social-web/">gnusocial や mastodon の哲学 - 何とは言わない天然水飲みたさ</link>
+				</listitem>
+				<listitem>
+					<link xl:href="https://blog.cardina1.red/2017/12/15/comparison-of-mastodon-and-gnusocial/">Mastodon が普及しつつあるけど、元 GNU Social 勢として思うこともありまして - 何とは言わない天然水飲みたさ</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				分散 SNS についての思想的な話を少々。
+			</simpara>
+		</section>
+	</section>
+</section>
+
+<section xml:id="creative-works">
+	<title>創作</title>
+
+	<section xml:id="creative-works--novels">
+		<title>小説</title>
+
+		<simpara>
+			ネタがあって気が向いたときなどに書くことがある。
+		</simpara>
+		<itemizedlist>
+			<listitem>
+				<link xl:href="https://github.com/lo48576/short-stories">lo48576/short-stories: 短編置き場</link>
+				<itemizedlist>
+					<listitem>
+						<link xl:href="https://novel18.syosetu.com/n2670fi/">妹エクスプロイト</link>
+						<itemizedlist>
+							<listitem>
+								<simpara>
+									妹のバッファオーバーフロー脆弱性を突いてペイロードを注入することで子プロセスを作ろうとする話 (下品)。
+									いや、本作品が下品に見えるのは、心が汚れているか画面解像度が高くてルビが読めてしまうせいです。
+								</simpara>
+								<simpara>
+									専門用語には丁寧な解説が付いているので安心。
+								</simpara>
+								<simpara>
+									本文は1000字未満。
+									解説は長い。
+								</simpara>
+							</listitem>
+						</itemizedlist>
+					</listitem>
+					<listitem>
+						<link xl:href="https://ncode.syosetu.com/n6471dg/">知能</link>
+						<itemizedlist>
+							<listitem>
+								<simpara>
+									お題: 万能細胞 ということで書いた短編。
+									人に見せるために書いた初めての作品かもしれない。
+								</simpara>
+								<simpara>
+									2000字ちょっと。
+								</simpara>
+							</listitem>
+						</itemizedlist>
+					</listitem>
+				</itemizedlist>
+			</listitem>
+			<listitem>
+				<link xl:href="https://ncode.syosetu.com/n4307ew/">異世界セマフォ</link>
+				<itemizedlist>
+					<listitem>
+						<simpara>
+							いわゆる「異世界スマホ」を捩ったタイトルから出オチで一話書いただけのもの。
+							2話のオチも決まっているのだが、ストーリーを全く考えていないのでまだ書けていない (はよ書け)。
+						</simpara>
+					</listitem>
+				</itemizedlist>
+			</listitem>
+		</itemizedlist>
+	</section>
+</section>
+
+</article>

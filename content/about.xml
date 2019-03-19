@@ -1,0 +1,217 @@
+---
+title: だれ
+created_at: 2019-03-19T02:11:21+09:00
+published_at: 2019-03-19T02:11:21+09:00
+updated_at: 2019-03-19T03:16:05+09:00
+format: docbook
+title: "だれ"
+kind: article
+
+excerpt: "だれ"
+---
+<?xml version="1.0"?>
+<article
+	xmlns="http://docbook.org/ns/docbook"
+	xmlns:xl="http://www.w3.org/1999/xlink"
+	xml:id="about-me"
+	xml:lang="ja"
+	version="5.1"
+>
+<title>だれ</title>
+
+<simpara>
+	情報工学系の大学院生。
+</simpara>
+
+<section xml:id="identity">
+	<title>Identities</title>
+
+	<section>
+		<title>SNS、コンテンツ共有サイト</title>
+
+		<section>
+			<title>私生活</title>
+
+			<itemizedlist>
+				<listitem>
+					Mastodon: <link xl:href="https://mastodon.cardina1.red/@lo48576">@lo48576@mastodon.cardina1.red</link>
+					<itemizedlist>
+						<listitem>
+							完全にプライベート用なので社会性を一切期待してはいけない
+						</listitem>
+					</itemizedlist>
+				</listitem>
+			</itemizedlist>
+		</section>
+
+		<section>
+			<title>進捗</title>
+
+			<itemizedlist>
+				<listitem>
+					Mastodon: <link xl:href="https://mastodon.cardina1.red/@loliconductor">@loliconductor@mastodon.cardina1.red</link>
+					<itemizedlist>
+						<listitem>
+							進捗用。
+							主に進捗のことや技術的な話題を一方的に投げるだけのアカウント。
+							人に見せるならこちら。
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					Twitter: <link xl:href="https://twitter.com/loliconductor">@loliconductor</link>
+					<itemizedlist>
+						<listitem>
+							Twitter へのミラー用。
+							Mastodon とだいたい同じことを呟くが、 Twitter アカウントはメインではない。
+							一応リプライなどはときどき確認するつもり。
+						</listitem>
+					</itemizedlist>
+				</listitem>
+			</itemizedlist>
+		</section>
+
+		<section>
+			<title>技術情報・成果物公開</title>
+
+			<itemizedlist>
+				<listitem>
+					GitHub: <link xl:href="https://github.com/lo48576">@lo48576</link>
+					<itemizedlist>
+						<listitem>
+							公開可能な最近のものはだいたいここに置いてある。
+							git を使っていなかった時代のものは残念ながらアーカイブの奥深くに眠っており、公開していない。
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					ブログ: <link xl:href="https://blog.cardina1.red/">何とは言わない天然水飲みたさ (blog.cardina1.red)</link>
+					<itemizedlist>
+						<listitem>
+							冗談や私生活から真面目な技術記事まで、体力のあるときに書いた記事はだいたいすべてここに投げている。
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					Qiita: <link xl:href="https://qiita.com/lo48576">@lo48576</link>
+					<itemizedlist>
+						<listitem>
+							基本的に何か書くときはブログなので、あまり Qiita は使っていない。
+							継続的に (あるいは定期的に) 更新する可能性のある記事を、気紛れで Qiita に置いたりしている。
+						</listitem>
+					</itemizedlist>
+				</listitem>
+			</itemizedlist>
+		</section>
+	</section>
+
+	<section>
+		<title>PGP</title>
+
+		<itemizedlist>
+			<listitem>
+				short: 0x492C9A5F
+			</listitem>
+			<listitem>
+				long: 0x3263C611492C9A5F
+			</listitem>
+			<listitem>
+				full: 4CC5 A8F9 C465 41E2 F1AA  41BE 3263 C611 492C 9A5F
+			</listitem>
+			<listitem>
+				<link xl:href="/assets/misc/lo48576-hard-wi-red.asc">Link to exported public key</link>
+			</listitem>
+		</itemizedlist>
+	</section>
+</section>
+
+<section xml:id="works">
+	<title>works</title>
+
+	<simpara>
+		<link xl:href="/works">別ページ</link>参照。
+	</simpara>
+</section>
+
+<section xml:id="environment-and-tools">
+	<title>env</title>
+
+	<simpara>
+		愛用のツールや環境など。
+	</simpara>
+
+	<section>
+		<title>基本</title>
+
+		<section>
+			<title>OS</title>
+
+			<simpara>
+				デスクトップとラップトップでは <link xl:href="https://www.gentoo.org/">Gentoo Linux</link> を常用。
+			</simpara>
+			<simpara>
+				何とは言わないノベルゲーム用に、仮想マシンで Windows 10 も持っている (が、基本的にゲーム以外で使わない)。
+			</simpara>
+		</section>
+
+		<section>
+			<title>Desktop / GUI</title>
+
+			<simpara>
+				<link xl:href="https://i3wm.org/">i3wm</link> を常用。
+			</simpara>
+			<simpara>
+				昔は <link xl:href="https://xmonad.org/">XMonad</link> を使っていたが、いずれ Wayland の <link xl:href="https://swaywm.org/">sway</link> などに乗り替えるための準備として i3 を使うようになった。
+			</simpara>
+		</section>
+
+		<section>
+			<title>terminal / console</title>
+
+			<simpara>
+				ターミナルは Rust 製の <link xl:href="https://github.com/jwilm/alacritty">alacritty</link> 。
+				シェルは <link xl:href="https://github.com/tmux/tmux">tmux</link> 上で <link xl:href="http://www.zsh.org/">zsh</link> を使っている。
+				エディタは neovim 。
+			</simpara>
+			<simpara>
+				alacritty, tmux, zsh には ambiwidth 関連の問題に対処するためのパッチを当てている: <link xl:href="https://gist.github.com/lo48576/194f05f9266761d6925495237594edbc">ambiwidth patches - GitHub</link> 。
+			</simpara>
+		</section>
+	</section>
+
+	<section>
+		<title>入力</title>
+
+		<section>
+			<title>キー配列</title>
+
+			<simpara>
+				論理は Dvorak 配列。
+				物理は JIS 配列でも US 配列でも使える (使う) が、右 Shift が長い US 配列の方が好き。
+			</simpara>
+		</section>
+
+		<section>
+			<title>日本語入力</title>
+
+			<simpara>
+				<link xl:href="http://openlab.ring.gr.jp/skk/">SKK</link> を常用。
+				Dvorak 配列でも案外どうにかなるものである。
+			</simpara>
+		</section>
+	</section>
+
+	<section>
+		<title>開発</title>
+
+		<section>
+			<title>言語</title>
+
+			<simpara>
+				昔は C や C++ を書いていたが、最近は <link xl:href="https://www.rust-lang.org/">Rust</link> 一択。
+			</simpara>
+		</section>
+	</section>
+</section>
+
+</article>
