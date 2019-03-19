@@ -19,6 +19,188 @@ excerpt: "つくったものなど"
 <title>works</title>
 
 <section>
+	<title>開発</title>
+
+	<simpara>
+		趣味ﾎﾟﾖｸﾞﾔﾐﾝ。
+	</simpara>
+	<section>
+		<title>ライブラリ</title>
+
+		<section>
+			<title>fbxcel [actively maintained]</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://github.com/lo48576/fbxcel">fbxcel</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				Rust 用の FBX ライブラリ。
+				ゲームで使いたくて作った。
+			</simpara>
+			<simpara>
+				<le:time datetime="2019-03-19T15:40:11+09:00">2019年3月</le:time>現在、 FBX 7 のバイナリパーサと極めて簡素な DOM 対応が実装されている。
+			</simpara>
+		</section>
+
+		<section>
+			<title>opaque_typedef [experimental]</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://github.com/lo48576/opaque_typedef">opaque_typedef</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				opaque typedef パターンの適用を自動化する (<code>derive で可能にする</code>) ための Rust 用の proc macro ライブラリ。
+			</simpara>
+			<simpara>
+				インターフェースのデザインも内部設計もうまい方法が思い付かず、 experimental のままになっている。
+			</simpara>
+		</section>
+
+		<section>
+			<title>sgr_macro [passively maintained]</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://github.com/lo48576/sgr_macro">sgr_macro</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				ANSI color sequence をお手軽に使うための C / C++ 用の header-only ライブラリ。
+			</simpara>
+			<simpara>
+				任意長引数のマクロやマクロ内ループ処理と向き合う練習のついでとして実装したものなので、黒魔術が利用されている。
+				マクロ定数を定義するだけで非侵襲的な拡張が容易に行える設計になっている。
+			</simpara>
+			<informalfigure>
+				<programlisting language="c"><![CDATA[printf(
+    "red char->" SGR(FG_RED)
+    "underline and bold->" SGR(UNDERLINE, BOLD)
+    "background green->" SGR(BG_GREEN)
+    "reset->" SGR(RESET) "sample end\n"
+);]]></programlisting>
+				<caption>
+					<phrase>利用例 (<link xl:href="https://github.com/lo48576/sgr_macro/blob/master/examples/sample.c"><filename>examples/sample.c</filename></link> より)</phrase>
+				</caption>
+			</informalfigure>
+		</section>
+	</section>
+
+	<section>
+		<title>アプリケーション</title>
+
+		<section>
+			<title>fbx-tree-view [passively maintained]</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://github.com/lo48576/fbx-tree-view">fbx-tree-view</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				FBX ファイルの木構造データを閲覧するための GUI アプリケーション。
+				FBX ライブラリ実装にあたって、 FBX データの内部をバイナリエディタで覗き見るのがつらかったため実装した。
+			</simpara>
+			<informalfigure>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="/about/fbx-tree-view-screenshot.png" />
+					</imageobject>
+					<alt>
+						<phrase>
+							fbx-tree-view によって、 FBX の木構造、ノード属性、警告やエラーなどを閲覧できる。
+						</phrase>
+					</alt>
+				</mediaobject>
+				<caption>
+					<phrase>
+						fbx-tree-view によって、 FBX の木構造、ノード属性、警告やエラーなどを閲覧している例
+					</phrase>
+				</caption>
+			</informalfigure>
+		</section>
+
+		<section>
+			<title>fbx_object_depviz [passively maintained]</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://github.com/lo48576/fbx_object_depviz">fbx_object_depviz</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				FBX のオブジェクトノード同士の関係を graphviz 形式でエクスポートする CLI アプリケーション。
+				FBX ライブラリ実装にあたって、 FBX データの構造を理解する必要があったため実装した。
+			</simpara>
+			<simpara>
+				json でクエリを指定することで、特定のノードを抽出して描画したり色を付けたりなどできる。
+			</simpara>
+			<informalfigure>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="/about/fbx_object_depviz-output-example.svg" />
+					</imageobject>
+					<alt>
+						<phrase>
+							fbx_object_depviz で、たとえば静的なメッシュ表示に必要そうなノードを抽出して関係を表示できる。
+						</phrase>
+					</alt>
+				</mediaobject>
+				<caption>
+					<phrase>fbx_object_depviz で、静的なメッシュ表示に必要そうなノードを抽出して関係を表示してみた例</phrase>
+				</caption>
+			</informalfigure>
+		</section>
+
+		<section>
+			<title>xslt10-lambda-calculus [passively maintained]</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://github.com/lo48576/xslt10-lambda-calculus">xslt10-lambda-calculus</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				XSLT 1.0 (と exslt の <code>node-set()</code>) によってλ計算の処理系を実装した。
+			</simpara>
+			<simpara>
+				巷にある XSLT の計算完備性のデモはチューリングマシンのエミュレーションをしていたり、λ計算の処理系であってもロジックの大部分が文字列処理だったりする。
+				しかし xslt10-lambda-calculus はλ式を XML にエンコードし、その抽象構文木を XSLT により処理して同じ形式の XML データを出力することで簡約を進行させるため、真に関数型言語的な (?) 処理系である。
+			</simpara>
+			<simpara>
+				de Bruijn indexing やη簡約、簡約基の発見、ワンステップ簡約、 pretty print、脱糖など様々なコンポーネントが単体で利用可能なようにモジュール化されている。
+				そのため、ライブラリとしての利用も可能である。
+				また、糖衣構文の追加も容易である。
+			</simpara>
+		</section>
+	</section>
+
+	<section>
+		<title>データ、スタイルシート</title>
+
+		<section>
+			<title>docbook-xhtml5 [actively maintained]</title>
+
+			<itemizedlist>
+				<listitem>
+					<link xl:href="https://github.com/lo48576/docbook-xhtml5">docbook-xhtml5</link>
+				</listitem>
+			</itemizedlist>
+			<simpara>
+				DocBook 5 から XHTML 5 への変換のための XSLT スタイルシート。
+				この web サイトも、 DocBook で書かれた記事をこのスタイルシートで変換することで生成している。
+			</simpara>
+			<simpara>
+				DocBook 5 のうちでも、ブログや自分のサイトで使う要素のみ優先的に対応している。
+			</simpara>
+		</section>
+	</section>
+</section>
+
+<section>
 	<title>創作</title>
 
 	<section>
